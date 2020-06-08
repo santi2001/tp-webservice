@@ -1,0 +1,103 @@
+<div class="row">
+    <section class="col-md-8 d-none d-md-block">
+        <div class="card">
+        <div class="card-header text-center conversor">
+            <h5 class="card-title">Conversor de Divisas</h5>
+        </div>
+        <div class="card-body">                
+            <table class="exchange table table-hover table-striped" cellpadding="3" >                    
+                <thead>                    
+                <tr class="bg-primary bordes ">
+                    <th></th>
+                    <th><img src="assets/imag/ARS.jpg" class="imagencita" alt="..."><br>ARS </th>
+                    <th class=""> <img src="assets/imag/USD.png"   class="imagencita" alt="..."><br>US</th>
+                    <th><img src="assets/imag/EUR.jpg"   class="imagencita" alt="..."><br>Euro</th>
+                    <th><img src="assets/imag/JPY.jpg"   class="imagencita" alt="..."><br>Yen</th>
+
+                </tr>
+                </thead>
+                <tbody class="margenesbody">
+                <tr class="bordes">
+                    <td rowspan="1"><img src="assets/imag/ARS.jpg" alt="..." class="imagencita"><br> ARS
+                     <br>   <p class="text-muted">Inverse:</p></td>                        
+                    <td ><br >{{listaconver[0].result}} <br> <br> 1.0000</td>
+                    <td><br>{{listaconver[1].result}}<br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[2].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[3].result}} <br>  <br> 1.0000</td>
+                         
+                </tr>
+                
+                <tr class="bordes">
+                    <td rowspan="1"><img src="assets/imag/USD.png" alt=".." class="imagencita"> <br>US
+                         <p class="text-muted">Inverse:</p>           
+                    </td>
+                    <td><br>{{listaconver[4].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[5].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[6].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[7].result}} <br>  <br> 1.0000</td>
+              
+                </tr>
+                <tr class="bordes">
+                    <td rowspan="1"><img src="assets/imag/EUR.jpg" alt="..." class="imagencita">  <br>  EUR <p class="text-muted">Inverse:</p></td>
+                    <td><br>{{listaconver[8].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[9].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[10].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[11].result}} <br>  <br> 1.0000</td>
+            
+                </tr>
+                <tr class="bordes">
+                    <td rowspan="1"><img src="assets/imag/JPY.jpg" alt="..." class="imagencita">  <br> YEN   <p class="text-muted">Inverse:</p></td>
+                    <td><br>{{listaconver[12].result}}¿ <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[13].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[14].result}} <br>  <br> 1.0000</td>
+                    <td><br>{{listaconver[15].result}} <br>  <br> 1.0000</td>
+                         </tr>
+                </tbody>
+            </table>            
+        </div>
+        </div>
+    </section>
+    <div class="col-sm-12 col-md-4">
+      <aside>
+          <div class="card">
+              <div class="card-header text-white text-center bg-info  ">
+                  <strong>Conversor de divisas</strong>
+              </div>
+              <div class="card-body bg-light">
+                  <form>
+                      <div class="form-group">
+                          <label for="txtcantidad">IngresarCantidad</label>
+                          <input type="number" name="input" class="form-control form-control-sm" id="txtcantidad" aria-describedby="emailHelp" [(ngModel)]=objeto1.from_value >                            
+                      </div>
+                      <div class="form-group">
+                          <label for="txtDe">De</label>
+                          <select id="txtDe" name="txtDe"  class="form-control form-control-sm" [(ngModel)]="objeto1.from_type" >
+                              <option value="ARS">ARS</option>
+                              <option value="USD"> US</option>
+                              <option value="BRL">Real</option>
+                              <option value="EUR">Euro</option>
+                              <option value="JPY">Yen</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="txtA">A</label>
+                          <select id="txtA" name="txtA" class="form-control form-control-sm" [(ngModel)]="objeto1.to_type" >
+                              <option value="ARS">ARS</option>
+                              <option value="USD">US</option>
+                              <option value="BRL">Real</option>
+                              <option value="EUR">Euro</option>
+                              <option value="JPY">Yen</option>
+                          </select>
+                      </div>
+                      <div class="form-group">                            
+                          <input type="text" class="form-control" readonly id="txtf" value="{{objeto1.result}}" >
+                      </div>
+                      <button type="submit" class=" col-sm-12 btn btn-info btn-sm" (click)="convertirMoneda()"> <i class="fal fa-bell"></i>Convertir
+                       
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </aside>
+  </div>
+    </div>

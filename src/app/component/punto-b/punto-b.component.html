@@ -1,0 +1,29 @@
+
+   <form>
+    <div class="form-group row">
+        <label  for="categoria" class="col-2">categor&iacute;a</label>
+ <select     id="categoria" name="categoria" class="form-control col-10 " [(ngModel)]="categoria">
+    <option value="soccer"> soccer</option>
+    <option value="cricket"> cricket</option>
+    <option value="basketball"> basketball</option>
+ </select>
+</div>
+<div>
+    <button type="button" class="btn btn-primary" (click)="cargarNoticias()"> cargar noticia </button>
+</div>
+</form>
+    <div *ngFor= "let item of noticias">
+    <div class="col-6 d-block">
+        <div class="card h-100 ">
+            <img src="{{item.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="">
+                    <h4><span class="badge badge-danger">{{item.tit}}</span></h4>
+                </a>
+                <p class="card-text"> {{item.con}} </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+ 

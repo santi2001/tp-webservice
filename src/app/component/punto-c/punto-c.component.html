@@ -1,0 +1,346 @@
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/aries.jpg" class="mr-2  imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-info mt-5 nombresodiaco" role="info">
+            <a (click)="mostrarfecha(4)" >Aries</a>  
+            
+            </div>
+        </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/leo.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="info">
+        <a (click)="mostrarfecha(8)" >Leo</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/saguitario.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success nombresodiaco mt-5 " role="alert">
+              <a (click)="mostrarfecha(12)">Saguitario</a>
+        </div>
+        </div>
+        </div>
+    </div>            
+  
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/tauro.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success  mt-5 nombresodiaco" role="alert">
+      <a (click)="mostrarfecha(5)">Tauro</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/virgo.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="alert">
+              <a (click)="mostrarfecha(9)">Virgo</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/capricornio.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="alert">
+              <a (click)="mostrarfecha(1)">Capricornio</a>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/geminis.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="alert">
+              <a (click)="mostrarfecha(6)">Gueminis</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/libra.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success nombresodiaco mt-5" role="alert">
+              <a (click)="mostrarfecha(10)">Libra</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/acuario.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="alert">
+              <a (click)="mostrarfecha(2)">Acuario</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/cancer.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="alert">
+            <a (click)="mostrarfecha(7)">Cancer</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/escorpio.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success mt-5 nombresodiaco" role="alert">
+              <a (click)="mostrarfecha(11)">Escorpio</a>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+        <div class="media">
+        <img src="assets/imag/picis.jpg" class="mr-2 imagen-horoscopo" alt="...">
+        <div class="media-body">
+            <div class="alert alert-success nombresodiaco mt-5" role="alert">
+              <a (click)="mostrarfecha(3)">Picis</a>
+        </div>
+        </div>
+        </div>
+    </div>
+  
+</div>
+<br>
+<div class="row col-12 ml-5 mb-5" >
+
+    <label for="txtfecha" class="mr-2 col-3">ingrese fecha</label>
+    <input class="col-4 mr-4" type="date" name="txtfecha" id="txtfecha"  form="YYYY-mm-dd" [(ngModel)]="fecha">
+      <button type="submit" class=" col-sm-3 btn btn-info btn-sm" (click)="mostrarfecha(0)"> mostrar horoscopo    
+      </button>
+
+   
+</div>
+
+    <aside >
+      <div *ngIf="control==4"  class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="aries" class=" alert alert-success card-title titulocard">Aries</h5>
+              <div class="card-body">
+                  <img src="assets/imag/aries.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">Horóscopo de hoy: Deberás tomar complicadas decisiones en lo que concierne a la pareja en la jornada de hoy. Busca en ti la aceptación.
+                  <br>
+                  Amor: Con tus sentimientos a flor de piel, sentirás que tu pareja no te ama lo suficiente. Busca hablar de esto con ella.
+                  <br>
+                  Riqueza: No dejes de lado lo seguro por explorar nuevos horizontes laborales. Se muy cuidadoso con las decisiones que tomas.
+                  <br>
+                  Bienestar: Utiliza el día de hoy para replantearte tus actitudes y acciones ante la vida. Esto te permitirá elegir siempre el camino más ventajoso.</p>
+              </div>
+            </div>
+      </div>
+      <div *ngIf="control ==9"  class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="virgo" class=" alert alert-success card-title titulocard">Virgo</h5>
+              <div class="card-body">
+                  <img src="assets/imag/virgo.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                    Horóscopo de hoy: Llegará aquel día por el que tanto tiempo esperaste y que ha estado en tus sueños continuamente. No temas arriesgarte.
+                  <br>
+                  Amor: No puedes permitir que el miedo nuble cada posibilidad que tienes de alcanzar la felicidad. Supera tus temores.
+                  <br>
+                  Riqueza: Presta atención a la forma en la que te diriges a tus pares laborales en la jornada de hoy. Estarás propenso a altercados.
+                  <br>
+                  Bienestar: La risa y el buen humor pueden ser una de las formas de curación más efectivos que existen. Es sorprendente el poder de la mente sobre el cuerpo.</p>
+              </div>
+            </div>
+          </div>
+      
+      <div *ngIf="control ==1"  class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="capricornio" class=" alert alert-success card-title titulocard">Capricornio</h5>
+              <div class="card-body">
+                  <img src="assets/imag/capricornio.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                  Horóscopo de hoy: Jornada indicada para procurar introducir nuevas costumbres a la rutina de cada día. Aprovéchala en todo lo que puedas.
+                  <br>
+                  Amor: No llegues a la determinación del compromiso muy abruptamente. Tomate un momento para meditarlo en detalle antes.
+                  <br>
+                  Riqueza: Tendrás un inicio de jornada complicado a nivel laboral. Te será difícil alcanzar tu ritmo acostumbrado.
+                  <br>
+                  Bienestar: Se respetuoso con las opiniones de las personas que te rodean, pero no te permitas ser influenciado por sus hábitos. Demuestra tu personalidad.
+                </p>
+              </div>
+            </div>
+      </div>
+      
+      <div *ngIf= "control==6"  class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5  id="gueminis" class=" alert alert-success card-title titulocard">Geminis</h5>
+              <div class="card-body">
+                  <img src="assets/imag/geminis.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                  Horóscopo de hoy: Estarás propenso a cometer errores durante la jornada de hoy. Mucho cuidado al trasladarte de un punto a otro de la ciudad.
+                  <br>
+                  Amor: Deberás pasar por algunos momentos de tensión junto a tu pareja debido a la aparición de ciertos elementos de discordia.
+                  <br>
+                  Riqueza: Prepárate para el inicio de una etapa de complicaciones continuas a nivel económico. Mucho cuidado con los gastos superfluos.
+                  <br>
+                  Bienestar: Dale a tu pareja el tiempo que necesite para poder superar esta sudestada de problemas que han afectado recientemente la relación
+                </p>
+              </div>
+            </div>
+          </div>
+    
+      <div *ngIf="control ==10"  class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5   id="libra" class=" alert alert-success card-title titulocard">Libra</h5>
+              <div class="card-body">
+                  <img src="assets/imag/libra.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                  Horóscopo de hoy: Finalmente encararás acciones de cambio en la pareja durante la jornada de hoy. Esto traerá aires de renovación a la relación.
+                  <br>
+                  Amor: Eventos de tu pasado saldrán a relucirse durante el día de hoy. Esto provocará miradas extrañas y algunas peleas.
+                  <br>
+                  Riqueza: La clave para poder abarcar todas las responsabilidades esta en la organización. Invierte un poco de tiempo en ella.
+                  <br>
+                  Bienestar: No niegues tus errores, aprende a enorgullecerte de ellos, pues estos muestran cuanto has aprendido. Asegúrate de no darles cabida nuevamente.
+                </p>
+              </div>
+            </div>
+      </div>
+      
+      <div *ngIf="control==2"  class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="acuario" class=" alert alert-success card-title titulocard">Acuario</h5>
+              <div class="card-body">
+                  <img src="assets/imag/acuario.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                  Horóscopo de hoy: Vivirás algunas desilusiones en el día de hoy, sobre todo a nivel profesional. No permitas que te afecten demasiado.
+                  <br>
+                  Amor: Te será imposible negar los sentimientos que embargan tu corazón. Quizás debas pensar en dar una segunda oportunidad.
+                  <br>
+                  Riqueza: Te será imposible apegarte a tu itinerario para la jornada laboral del día de hoy. No caigas en la desesperación.
+                  <br>
+                  Bienestar: No sirve de nada que guardes tus sentimientos y emociones para que luego de un largo tiempo de acumule exploten en tu rostro. Aprende a comunicarte.
+                </p>
+              </div>
+            </div>
+      </div>
+    
+      <div  *ngIf="control ==7" class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="cancer" class=" alert alert-success card-title titulocard">Cancer</h5>
+              <div class="card-body">
+                  <img src="assets/imag/cancer.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                  Horóscopo de hoy: Con esa facilidad para convencer alcanzarás lo que te has propuesto poco a poco. En este momento te atreves a todo.
+                  <br>
+                  Amor: Elementos positivos asientan tus relaciones. Es normal la armonía, lo raro es que haya subordinación en los afectos.
+                  <br>
+                  Riqueza: Poca fortuna con los números, aunque tendrás mucha suerte si trabajas con grupos. Tus objetivos son nobles, así que adelante.
+                  <br>
+                  Bienestar: La alegría compartida y la pasión no necesitan un motivo. Sal de lo cotidiano para recrear la buena convivencia en la relación.
+                </p>
+              </div>
+            </div>
+      </div>
+    
+      <div *ngIf="control ==11" class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="escorpio" class=" alert alert-success card-title titulocard">Escorpio</h5>
+              <div class="card-body">
+                  <img src="assets/imag/escorpio.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">
+                  Horóscopo de hoy: Te sentirás apático con tus compañeros de trabajo, esa es la causa por la que nada se te acercará en el día de hoy.
+                  <br>
+                  Amor: Las discusiones son cada vez más intensas y ya se hacen insostenibles. Lo mejor es que se replanteen esta relación.
+                  <br>
+                  Riqueza: Algunas oportunidades que se presentan no son del todo transparentes. Estás avisado, todo depende de lo que hagas.
+                  <br>
+                  Bienestar: Si un problema tiene solución, búscala y resuélvelo inmediatamente. No dejes pasar el tiempo porque los problemas se acumularán.
+                </p>
+              </div>
+            </div>
+      </div>
+    
+      <div *ngIf="control ==3" class="col-md-12 col-sm-12">
+          <div class="card" >
+              <h5 id="picis" class=" alert alert-success card-title titulocard">Picis</h5>
+              <div class="card-body">
+                  <img src="assets/imag/picis.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+                <p class="card-text">Horóscopo de hoy: Si estás por mudarte, hoy es un día ideal para salir a gastar algo de dinero en muebles o adornos para el hogar.
+                  <br>
+                  Amor: Una salida al cine o una cena romántica son dos buenas opciones para sorprender a tu pareja. Le encantará que la mimes así.
+                  <br>
+                  Riqueza: No te exijas más de lo que puedes cumplir. De lo contrario, harás que tus proyectos vayan rumbo al fracaso.
+                  <br>
+                  Bienestar: Haz un examen de conciencia y analiza cada uno de tus èxitos y fracasos. De esta manera podrás evaluar en qué dirección avanzar.</p>
+              </div>
+            </div>
+      </div>
+      <div *ngIf="control ==5" class="col-md-12 col-sm-12">
+        <div class="card" >
+            <h5 id="tauro" class=" alert alert-success card-title titulocard">Tauro</h5>
+            <div class="card-body">
+                <img src="assets/imag/tauro.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+              <p class="card-text">            
+                             Horóscopo de hoy: Día excelente para reuniones creadoras de ideas y proyectos. Buscarás la compañía de amigos de tu entorno laboral.
+                <br>
+              Amor: Día de discusiones y desencuentros emocionales. Estarás con tendencia al mal humor, evita entrar en disputas innecesarias.
+                    <br>                        
+                  Riqueza: No permitas que se lleven el crédito por tu reciente trabajo. Deja claro que no tolerarás este tipo de comportamiento.
+                        <br>                    
+                  Bienestar: No hay nada más doloroso que perder un ser querido. Es importante saber que las personas amadas siempre vivirán a través de nuestros recuerdos</p>
+            </div>
+          </div>
+    </div>
+    <div *ngIf="control ==8" class="col-md-12 col-sm-12">
+      <div class="card" >
+          <h5 id="leo" class=" alert alert-success card-title titulocard">Leo</h5>
+          <div class="card-body">
+              <img src="assets/imag/leo.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+            <p class="card-text">
+              Horóscopo de hoy: Hoy no te sientes inspirado para reflexionar. Te estas dispersando y acabará por no servirte para nada todo lo que haces.
+              <br>
+              Amor: Las sacudidas que experimentan las relaciones, servirán para hacerlas más perfectas cuando pasen los momentos peligrosos.
+              <br>
+              Riqueza: Te costará desprenderte de bienes materiales, pero con el tiempo te darás cuenta que es lo mejor. Invierte inteligentemente.
+              <br>
+              Bienestar: Deja espacio para la gratificación, más allá de las obligaciones. Muéstrate flexible ante los cambios, así manejarás la situación por el camino acertado.
+            </p>
+          </div>
+        </div>
+  </div>
+  
+  <div *ngIf="control ==12" class="col-md-12 col-sm-12">
+      <div class="card" >
+          <h5 id="saguitario" class=" alert alert-success card-title titulocard">Saguitario</h5>
+          <div class="card-body">
+              <img src="assets/imag/saguitario.jpg" class="card-img-top rounded float-right imagen-horoscopo" alt="...">
+            <p class="card-text">
+              Horóscopo de hoy: Contarás con un sentido del humor envidiable que lograrás esparcir en cada lugar que habites durante la jornada de hoy.
+              <br>
+              Amor: Te será imposible disfrazar tus sentimientos cuando inicies ciertas discusiones con tu pareja en el día de hoy. Cuidado.
+              <br>
+              Riqueza: Evita caer en discusiones innecesarias con ciertos pares laborales congraciados con tus superiores. Usa tu inteligencia.
+              <br>
+              Bienestar: Procura solucionar tus inconvenientes a través del dialogo civilizado y respetuoso. Recurre a otras tácticas menos persuasivas como ultimo recurso.
+            </p>
+          </div>
+        </div>
+  </div>
+    </aside>

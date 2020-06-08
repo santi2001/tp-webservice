@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="card">
+            <div class="card-header text-center titulocard">
+                Estadi­sticas
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12 offset-md-3">
+                    <div class="col-md-6">                        
+                        <div class="form-group row">
+                            <label for="txtDe" class="col-md-5">Elija el pais</label>
+                            <select class="form-control form-control-sm col-md-10" name="txtDe" id="txtDe" [(ngModel)]="nombre_pais">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Brazil">Brasil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Peru">Peru</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Venezuela">Venezuela</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-check">
+                            <input  name="inp1" type="checkbox" class="form-check-input" id="exampleCheck1"  ng-true-value="true" ng-false-value="false" [(ngModel)]="check1">
+                            <label class="form-check-label" for="exampleCheck1" >Casos confirmados</label>                            
+                        </div>
+                        <div class="form-group form-check">
+                            <input  name="inp2" type="checkbox" class="form-check-input" id="exampleCheck2" ng-true-value="true" ng-false-value="false" [(ngModel)]="check2">
+                            <label class="form-check-label" for="exampleCheck2"  >Curados</label>                            
+                        </div>
+                        <div class="form-group form-check">
+                            <input  name="inp3" type="checkbox" class="form-check-input" id="exampleCheck3" ng-true-value="true" ng-false-value="false" [(ngModel)]="check3">
+                            <label class="form-check-label" for="exampleCheck3" >Fallecidos</label>                            
+                        </div>
+                    </div>                        
+                    <button type="submit" class=" col-sm-4 btn btn-primary btn-sm" (click)="cargarconsulta()">  Consultar</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+            <div   *ngIf="check4" name="fds" class="bg-info ml-5 mt-5 mr-5">
+                <div  *ngIf="check4">
+                    <label name="lb4" > pais  {{informe2["Country_text"]}}</label>
+                </div>
+                <div   *ngIf="check1"><label  name="lb1">los casos son : {{informe2["Total Cases_text"]}}</label></div>
+                <div  *ngIf="check2">
+                    <label  name="lb2">los infectados son : {{informe2["Total Deaths_text"]}}</label>
+                </div>
+               <div  *ngIf="check3"> <label  name="lb3">los curados son : {{informe2["Total Recovered_text"]}}</label></div>
+               
+            </div>
+    
+        
+       
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <section>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header text-white text-center ">
+                                    <h5 class="card-title  titulocard">Evolucion de la Pandemia Covid19</h5>
+                                </div>
+                                <div class="card-body ">                
+                                    <table class="table table-striped table-hover" cellpadding="6">                    
+                                        <thead>                    
+                                        <tr class=" titulocard">
+                                            <th>Pais</th>
+                                            <th>Infectados</th>
+                                            <th>Curados</th>
+                                            <th>Fallecidos</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody *ngFor= "let item of informes">
+                                        <tr>
+                                            <td>{{item["Country_text"]}}</td>
+                                            <td>{{item["Total Cases_text"]}}</td>
+                                            <td>{{item["Total Recovered_text"]}}</td>
+                                            <td>{{item["Total Deaths_text"]}}</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>            
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                
+                </section>
+            </div>
+    </div>
+</div>
+
+</div>

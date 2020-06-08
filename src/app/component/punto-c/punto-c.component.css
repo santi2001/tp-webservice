@@ -1,0 +1,15 @@
+.imagen-horoscopo{
+    margin-top: 1em;
+    width: 10em;
+    height: 10em;
+    border-radius: 46px 46px 46px 46px;
+    -moz-border-radius: 46px 46px 46px 46px;
+    -webkit-border-radius: 46px 46px 46px 46px;
+    border: 0px solid #000000;
+  }
+  .bordes{
+    margin-top: none;
+    margin-left: none;
+    margin-bottom: none;
+    margin-right: none;
+  }
